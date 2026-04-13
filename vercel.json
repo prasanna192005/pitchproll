@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/encrypt", "destination": "/api/index" },
+    { "source": "/decrypt", "destination": "/api/index" },
+    { "source": "/cipher", "destination": "/api/index" },
+    { "source": "/cypher", "destination": "/api/index" },
+    { "source": "/test", "destination": "/api/index" }
+  ]
+}

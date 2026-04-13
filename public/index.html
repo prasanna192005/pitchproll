@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Gemini - Secure Neural Link</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Cipher Gemini</h1>
+            <p class="subtitle">Secure Neural Link System</p>
+        </header>
+
+        <main>
+            <!-- Encoder Tool (New) -->
+            <div class="studio-card encoder-card hidden" id="encoderCard">
+                <div class="input-block">
+                    <label>Plaintext Prompt (To Encrypt)</label>
+                    <textarea id="plainTextToEncrypt" placeholder="Type your prompt here to encrypt it..."></textarea>
+                </div>
+                <button id="encryptBtn" class="action-btn">Generate Cipher</button>
+            </div>
+
+            <!-- Main Processing Tool -->
+            <div class="studio-card">
+                <div class="input-block">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label>Encrypted Prompt</label>
+                        <button id="toggleEncoder" style="background: none; border: none; color: var(--accent); font-size: 10px; cursor: pointer; text-decoration: underline;">Open Encoder</button>
+                    </div>
+                    <textarea id="hashedPrompt" placeholder="AES Payload..."></textarea>
+                </div>
+
+                <div class="input-block">
+                    <label>Secret Key</label>
+                    <input type="password" id="secretKey" value="jp1234">
+                </div>
+
+                <button id="processBtn" class="action-btn">Process Cipher</button>
+                
+                <div id="status"></div>
+
+                <div class="result-block hidden" id="resultArea">
+                    <label>Encrypted Response</label>
+                    <div class="copy-wrapper">
+                        <textarea id="finalHashedResponse" readonly></textarea>
+                        <button id="copyBtn">COPY</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <span>AES-256</span>
+            <span>GEMINI 3 PREVIEW</span>
+        </footer>
+    </div>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai",
+        "crypto-es": "https://esm.sh/crypto-es"
+      }
+    }
+    </script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

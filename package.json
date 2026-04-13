@@ -1,0 +1,17 @@
+{
+  "name": "yoyopatil",
+  "version": "1.0.0",
+  "description": "Cipher Gemini API & Frontend",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "node api/index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
