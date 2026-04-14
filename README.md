@@ -19,7 +19,7 @@ Designed for both the browser and Postman, Cipher Gemini ensures your prompts an
 ### 1. Local Setup
 1.  **Clone the repo**:
     ```bash
-    git clone https://github.com/your-username/pitchproll.git
+    git clone https://github.com/prasanna192005/pitchproll.git
     cd pitchproll
     ```
 2.  **Install dependencies**:
